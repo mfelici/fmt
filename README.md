@@ -83,9 +83,9 @@ SELECT FMT(126.987654, 3, 'P');
 (1 row)
 ```
 ## How to install FMT()
-- First step: have a look to the ```Makefile```
-- Second - as dbadmin - deploy the code in Vertica: ```make deploy```
-- You can run ```make test``` to check everything is ok
+- **First**... have a look to the ```Makefile```
+- **Second**, as dbadmin, deploy the code in Vertica: ```make deploy```
+- And, **finally**, you can ```make test``` and check everything is ok by comparing the output with the expected one here below...
 
 Expected output:
 ```bash
