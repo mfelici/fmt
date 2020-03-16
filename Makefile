@@ -1,5 +1,10 @@
 deploy:
 	vsql -U dbadmin -X -f fmt.sql
+	@echo " \
+		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC) TO PUBLIC; \
+		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC, d INTEGER) TO PUBLIC; \
+		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC, d INTEGER, f VARCHAR) TO PUBLIC; \
+	" | vsql -U dbadmin  -X -f - -e
 test: 
 	@echo " \
 		SELECT FMT(-1234); \
