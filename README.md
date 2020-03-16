@@ -17,7 +17,7 @@ but...
 3. it convert input numbers to FLOAT which can introduce approximations for very large numbers
 
  ```FMT()``` overcomes all these issues:
- - it short to type
+ - it's short to type
  - it will automatically insert a thousand separators every three digits *on its own*
  - it does not introduce approximations and can work with arbitrary long numbers.
 
