@@ -5,7 +5,7 @@ I know the standard ```TO_CHAR``` is implemented by several databases (including
 ```sql
 SELECT TO_CHAR(1234555677789.12345, '9G999G999G999G999D99') FROM DUAL;
 
-TO_CHAR
+        TO_CHAR
 -----------------------
 1,234,555,677,789.12
 
