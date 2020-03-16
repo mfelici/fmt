@@ -12,7 +12,7 @@ TO_CHAR
 (1 row)
 ```
 but...
-1. this is too long to type for my taste
+1. it is too long to type for my taste
 2. they pretend me to know in advance the format of the output string and put the thousand **group separators** (G) in the right places
 3. it convert input numbers to FLOAT which can introduce approximations for very large numbers
 
