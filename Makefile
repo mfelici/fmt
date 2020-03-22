@@ -1,10 +1,10 @@
 deploy:
 	vsql -U dbadmin -X -f fmt.sql
 	@echo " \
-		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC) TO PUBLIC; \
-		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC, d INTEGER) TO PUBLIC; \
-		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC, d INTEGER, f VARCHAR) TO PUBLIC; \
-	" | vsql -U dbadmin  -X -f - -e
+		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC) TO PUBLIC ; \
+		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC, d INTEGER) TO PUBLIC ; \
+		GRANT EXECUTE ON FUNCTION FMT(n NUMERIC, d INTEGER, f VARCHAR ) TO PUBLIC ; \
+	" | vsql -U dbadmin -AXntqe -f - 
 test: 
 	@echo " \
 		SELECT FMT(-1234); \
@@ -18,10 +18,10 @@ test:
 		SELECT FMT(0.1234621, 2, 'P'); \
 		SELECT FMT(0.00345432, 3, 'T'); \
 		SELECT FMT(126.987654, 3, 'P'); \
-	" | vsql -U dbadmin  -X -f - -e
+	" | vsql -U dbadmin -X -f - -e
 clean:
 	@echo " \
 		DROP FUNCTION FMT(n NUMERIC) ; \
 		DROP FUNCTION FMT(n NUMERIC, d INTEGER) ; \
 		DROP FUNCTION FMT(n NUMERIC, d INTEGER, f VARCHAR) ; \
-	" | vsql -U dbadmin  -X -f - -e
+	" | vsql -U dbadmin -X -f - -e
