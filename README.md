@@ -1,5 +1,5 @@
 ﻿## What is FMT().
-FMT() is a simple Vertica User Defined SQL Function to format numbers... with thousand/decimal separators according to the server locale definition and round them... * the right way*. 
+FMT() is a simple Vertica User Defined SQL Function to format numbers... with thousand/decimal separators according to the server locale definition and round them... *the right way*. 
 
 I know the standard ```TO_CHAR``` is implemented by several databases (including Vertica):
 ```sql
